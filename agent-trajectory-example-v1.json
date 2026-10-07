@@ -1,0 +1,272 @@
+{
+  "trajectory_id": "TR-SYN-001",
+  "source_kind": "synthetic",
+  "contract_version": "gigemma-specialist-agent-pilot-1",
+  "model_inference_performed": false,
+  "human_gold": false,
+  "steps": [
+    {
+      "state": {
+        "contract_version": "gigemma-specialist-agent-pilot-1",
+        "episode_id": "EP-SYN-01",
+        "step_index": 0,
+        "data_version": "syn-reading-v0",
+        "annotation_version": 1,
+        "codebook_version": 1,
+        "raw_evidence": [
+          {
+            "evidence_id": "E-SYN-01",
+            "utterance_id": "SYN-01",
+            "speaker_id": "S01",
+            "text": "午前の開催に賛成です。"
+          },
+          {
+            "evidence_id": "E-SYN-02",
+            "utterance_id": "SYN-02",
+            "speaker_id": "S02",
+            "text": "午後なら参加できます。"
+          }
+        ],
+        "evidence_ids": [
+          "E-SYN-01",
+          "E-SYN-02"
+        ],
+        "provided_evidence_ids": [
+          "E-SYN-01",
+          "E-SYN-02"
+        ],
+        "coverage": {
+          "available_count": 2,
+          "provided_count": 2,
+          "omitted_count": 0,
+          "complete": true
+        },
+        "runner_snapshot_complete": true,
+        "observations": [],
+        "budget": {
+          "remaining_calls": 2,
+          "remaining_tasks": 2
+        },
+        "cancel_requested": false,
+        "deadline_epoch": 1000,
+        "now_epoch": 100,
+        "known_task_ids": [],
+        "seen_intent_fingerprints": []
+      },
+      "candidate": {
+        "contract_version": "gigemma-specialist-agent-pilot-1",
+        "decision": {
+          "kind": "request_analysis",
+          "reason": "固定版をコードで集計する必要がある"
+        },
+        "supporting_result_ids": [],
+        "gurumoji_result": {
+          "summary": "集計を提案する。まだ結果を受け取っていない",
+          "claims": [],
+          "analysis_requests": [
+            {
+              "role": "statistics",
+              "kind": "analysis",
+              "result_id": "",
+              "initial_sections": [],
+              "question": "対象発話のcodesの頻度と欠測を確認する",
+              "why_now": "固定版の集計結果がまだない",
+              "success_criteria": "分母・欠測・根拠ID・入力版のある結果が返る",
+              "method_id": "label_frequency",
+              "label_field": "codes",
+              "evidence_ids": [
+                "E-SYN-01",
+                "E-SYN-02"
+              ],
+              "importance": "medium",
+              "importance_reason": "頻度の記述に必要",
+              "dependencies": [],
+              "label_dependent": true,
+              "replicate_id": ""
+            }
+          ],
+          "label_patches": []
+        }
+      },
+      "mock_core_approved": true,
+      "observation": {
+        "task_id": "mock-task-01",
+        "result_id": "mock-result-01",
+        "status": "succeeded",
+        "method_id": "label_frequency",
+        "data_version": "syn-reading-v0",
+        "annotation_version": 1,
+        "codebook_version": 1,
+        "evidence_ids": [
+          "E-SYN-01",
+          "E-SYN-02"
+        ],
+        "payload": {
+          "denominator": 2,
+          "missing_count": 0,
+          "rows": [
+            {
+              "label": "fixture_A",
+              "count": 1,
+              "denominator": 2,
+              "proportion": 0.5,
+              "evidence_ids": [
+                "E-SYN-01"
+              ]
+            },
+            {
+              "label": "fixture_B",
+              "count": 1,
+              "denominator": 2,
+              "proportion": 0.5,
+              "evidence_ids": [
+                "E-SYN-02"
+              ]
+            }
+          ],
+          "manifest": {
+            "kind": "deterministic_code",
+            "source_kind": "synthetic",
+            "method_version": "label-frequency-1",
+            "analysis_unit": "utterance",
+            "scope": "selected",
+            "evidence_ids": [
+              "E-SYN-01",
+              "E-SYN-02"
+            ],
+            "dataset_version": "syn-reading-v0",
+            "annotation_version": 1,
+            "codebook_version": 1
+          }
+        }
+      },
+      "next_state_ref": "TR-SYN-001:1"
+    },
+    {
+      "state": {
+        "contract_version": "gigemma-specialist-agent-pilot-1",
+        "episode_id": "EP-SYN-01",
+        "step_index": 1,
+        "data_version": "syn-reading-v0",
+        "annotation_version": 1,
+        "codebook_version": 1,
+        "raw_evidence": [
+          {
+            "evidence_id": "E-SYN-01",
+            "utterance_id": "SYN-01",
+            "speaker_id": "S01",
+            "text": "午前の開催に賛成です。"
+          },
+          {
+            "evidence_id": "E-SYN-02",
+            "utterance_id": "SYN-02",
+            "speaker_id": "S02",
+            "text": "午後なら参加できます。"
+          }
+        ],
+        "evidence_ids": [
+          "E-SYN-01",
+          "E-SYN-02"
+        ],
+        "provided_evidence_ids": [
+          "E-SYN-01",
+          "E-SYN-02"
+        ],
+        "coverage": {
+          "available_count": 2,
+          "provided_count": 2,
+          "omitted_count": 0,
+          "complete": true
+        },
+        "runner_snapshot_complete": true,
+        "observations": [
+          {
+            "task_id": "mock-task-01",
+            "result_id": "mock-result-01",
+            "status": "succeeded",
+            "method_id": "label_frequency",
+            "data_version": "syn-reading-v0",
+            "annotation_version": 1,
+            "codebook_version": 1,
+            "evidence_ids": [
+              "E-SYN-01",
+              "E-SYN-02"
+            ],
+            "payload": {
+              "denominator": 2,
+              "missing_count": 0,
+              "rows": [
+                {
+                  "label": "fixture_A",
+                  "count": 1,
+                  "denominator": 2,
+                  "proportion": 0.5,
+                  "evidence_ids": [
+                    "E-SYN-01"
+                  ]
+                },
+                {
+                  "label": "fixture_B",
+                  "count": 1,
+                  "denominator": 2,
+                  "proportion": 0.5,
+                  "evidence_ids": [
+                    "E-SYN-02"
+                  ]
+                }
+              ],
+              "manifest": {
+                "kind": "deterministic_code",
+                "source_kind": "synthetic",
+                "method_version": "label-frequency-1",
+                "analysis_unit": "utterance",
+                "scope": "selected",
+                "evidence_ids": [
+                  "E-SYN-01",
+                  "E-SYN-02"
+                ],
+                "dataset_version": "syn-reading-v0",
+                "annotation_version": 1,
+                "codebook_version": 1
+              }
+            }
+          }
+        ],
+        "budget": {
+          "remaining_calls": 1,
+          "remaining_tasks": 1
+        },
+        "cancel_requested": false,
+        "deadline_epoch": 1000,
+        "now_epoch": 100,
+        "known_task_ids": [
+          "mock-task-01"
+        ],
+        "seen_intent_fingerprints": []
+      },
+      "candidate": {
+        "contract_version": "gigemma-specialist-agent-pilot-1",
+        "decision": {
+          "kind": "finish",
+          "reason": "同版の模擬集計が返り、今回の専門家応答を完了できる"
+        },
+        "supporting_result_ids": [
+          "mock-result-01"
+        ],
+        "gurumoji_result": {
+          "summary": "合成2発話のfixture_Aとfixture_Bは各1件。各比率は1/2、欠測は0件。",
+          "claims": [],
+          "analysis_requests": [],
+          "label_patches": []
+        }
+      },
+      "observation": null,
+      "next_state_ref": null
+    }
+  ],
+  "notes": [
+    "Each record is a proposed synthetic training/evaluation example, not an executed model trace.",
+    "finish terminates the specialist response, not the Gurumoji run.",
+    "fixture_A/B are test symbols, not approved semantic labels."
+  ]
+}

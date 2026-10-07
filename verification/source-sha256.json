@@ -1,0 +1,34 @@
+{
+  "artifact_scope": "public synthetic design subset",
+  "executable_sources_unchanged_from_tested_artifacts": true,
+  "files": {
+    "canonical_candidate.py": {
+      "sha256": "d1da8b0912506dceb0efd61ebc9e20829f12054b3b1f42670a37d147ff71f80e",
+      "bytes": 16775
+    },
+    "test_canonical_candidate.py": {
+      "sha256": "931d5bf8630147c4e28b278c7fa57b93af9b251a067e6ec2608cacc3894dbd36",
+      "bytes": 12203
+    },
+    "agent_contract_candidate.py": {
+      "sha256": "db05a47102651ff1f90efb0b80d599b925ef9096e99b3cad09dd695e5941a471",
+      "bytes": 23152
+    },
+    "test_agent_contract_candidate.py": {
+      "sha256": "8f98af2c8aa294550c801e3e4e9be916e986bbe0126529b62e31b79b3fea573c",
+      "bytes": 18775
+    },
+    "agent-contract-fixture-candidates-v2.json": {
+      "sha256": "5642345c868c938438602701bfb39718fe76c3bd72c4a3367a27a03f1b9b150e",
+      "bytes": 80876
+    },
+    "agent-baseline-prompt-v1.txt": {
+      "sha256": "ac0e1543f620b49d953c04ff2b83f2def6d80e2bbb247476b59b28ea77d8cd02",
+      "bytes": 3468
+    },
+    "agent-trajectory-example-v1.json": {
+      "sha256": "fb1b12b9e710277eaed3924310331ae9118006f963f258ccd10a417ed0158b30",
+      "bytes": 8180
+    }
+  }
+}
